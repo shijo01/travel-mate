@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017.
+  ~ Spark Intelligence Labs Private Limited.
+  ~  All Rights Reserved.
+  ~
+  ~  NOTICE:  All information contained herein is, and remains the property of Spark
+  ~   Intelligence Labs Private Limited. and its suppliers, if any.  The intellectual and
+  ~   technical concepts contained herein are proprietary to Spark Intelligence Labs
+  ~   Private Limited and its suppliers and may be covered by India and Foreign Patents,
+  ~   patents in process, and are protected by trade secret or copyright law. Dissemination
+  ~   of this information or reproduction of this material is strictly forbidden unless
+  ~   prior written permission is obtained from Spark Intelligence Labs Private Limited.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+  <gradient
+      android:angle="270"
+      android:endColor="#44000000"
+      android:startColor="@android:color/transparent"/>
+</shape>

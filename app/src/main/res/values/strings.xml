@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Travel Mate</string>
+    <string name="retry">Retry</string>
+    <string name="loading_error">Something went wrong</string>
+    <string name="welcome_to_travelmate">Welcome to TravelMate</string>
+    <string name="book_now">BOOK NOW</string>
+    <string name="price_per_person">Price per person</string>
+    <string name="price">\u20b9 %1$s</string>
+</resources>
