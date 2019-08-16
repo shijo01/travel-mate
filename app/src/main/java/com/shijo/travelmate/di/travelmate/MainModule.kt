@@ -1,5 +1,6 @@
 package com.shijo.travelmate.di.travelmate
 
+import com.bumptech.glide.RequestManager
 import com.shijo.travelmate.data.network.TravelMateApi
 import com.shijo.travelmate.ui.travelmate.locationlist.LocationListAdapter
 import dagger.Module
@@ -20,8 +21,8 @@ class MainModule {
         @MainScope
         @Provides
         @JvmStatic
-        fun provideLocationListAdapter(): LocationListAdapter {
-            return LocationListAdapter()
+        fun provideLocationListAdapter(requestManager: RequestManager): LocationListAdapter {
+            return LocationListAdapter(requestManager)
         }
     }
 }

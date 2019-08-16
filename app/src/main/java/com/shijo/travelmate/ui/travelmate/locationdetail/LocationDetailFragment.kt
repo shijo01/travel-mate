@@ -42,8 +42,13 @@ class LocationDetailFragment : DaggerFragment() {
         locationId = arguments?.getInt("id")
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_location_detail, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_location_detail, container, false)
         return binding.root
     }
 
@@ -57,14 +62,12 @@ class LocationDetailFragment : DaggerFragment() {
     }
 
     private fun subscribeObservers() {
-        Log.d(TAG, "subscribeObservers: $locationId")
-
         if (locationId != null) {
             viewModel.getLocation(locationId!!).removeObservers(viewLifecycleOwner)
             viewModel.getLocation(locationId!!).observe(this, Observer { location ->
-                binding.location = location
                 Log.d(TAG, "subscribeObservers: $location")
-                requestManager.load(location.url).into(imageViewLocation)
+                binding.location = location
+                binding.imageUrl = location.url
             })
         }
 
